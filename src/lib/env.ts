@@ -3,7 +3,7 @@ import { Static, Type as T } from "@sinclair/typebox";
 
 const schema = T.Object({
   PGHOST: T.String({ default: "localhost" }),
-  PGPORT: T.Integer({ default: 5432 }),
+  PGPORT: T.Integer({ default: 5433 }),
   PGUSER: T.String({ default: "api" }),
   PGPASSWORD: T.String({ default: "apiPassword" }),
   PGDATABASE: T.String({ default: "api" }),

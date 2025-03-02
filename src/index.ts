@@ -9,7 +9,10 @@ import fastifyCors from "@fastify/cors";
   const server = fastify({
     logger: { level: "debug" },
   })
-    .register(fastifyCors)
+    .register(fastifyCors, {
+      origin: "*",
+      methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS']
+    })
     .register(api, {
       prefix: "/api/v1",
       db: {

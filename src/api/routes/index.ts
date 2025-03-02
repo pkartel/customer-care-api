@@ -6,6 +6,8 @@ import { routeCreateTicket } from "./tickets/create-ticket";
 import { routeDeleteTicket } from "./tickets/delete-ticket";
 import { routeResolveTicket } from "./tickets/resolve-ticket";
 import { routeListTicketMessages } from "./tickets/list-ticket-messages";
+import { routeBulkAddMessageToTickets } from "./tickets/bulk-add-message";
+import { routeSseNotifications } from "./tickets/bulk-add-message-notif";
 
 export async function routes(instance: FastifyInstance) {
   instance
@@ -14,6 +16,8 @@ export async function routes(instance: FastifyInstance) {
     .register(routeDeleteTicket)
     .register(routeCreateTicket)
     .register(routeAddMessageToTicket)
+    .register(routeBulkAddMessageToTickets)
+    .register(routeSseNotifications)
     .register(routeResolveTicket)
     .register(routeListTicketMessages)
     ;
