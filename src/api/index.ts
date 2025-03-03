@@ -2,7 +2,7 @@ import { FastifyInstance } from "fastify";
 import * as pg from "pg";
 import { db } from "./plugins/db";
 import { routes } from "./routes";
-import { startQueueProcessing } from "./plugins/bulkMessageUpdateQueue";
+import { startQueueProcessing } from "./plugins/bulk-message-queue";
 
 type Opts = {
   db: pg.PoolConfig;

@@ -39,7 +39,7 @@ export function startQueueProcessing(fastify: FastifyInstance) {
     let processedTickets = 0;
 
     while (processedTickets < ticketsTotal) {
-      const chunk = ticketIds.slice(processedTickets, processedTickets + 100);
+      const chunk = ticketIds.slice(processedTickets, processedTickets + 10); // increase chunk size to 100 for big batches
       
       assert.ok(fastify.db)
       const results = await updateMessageTable(fastify.db, {taskId, ticketIds: chunk, text, senderId, senderType}, fastify.log);

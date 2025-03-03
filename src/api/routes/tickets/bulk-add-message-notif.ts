@@ -2,7 +2,7 @@ import { FastifyBaseLogger, FastifyInstance } from "fastify";
 import { Writable } from "stream";
 import { Type as T } from "@sinclair/typebox";
 import { TypeBoxTypeProvider } from "@fastify/type-provider-typebox";
-import { Result } from "../../plugins/bulkMessageUpdateQueue";
+import { Result } from "../../plugins/bulk-message-queue";
 
 interface NotifySenderPayload {
   senderId: string;
